@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Welcome to the Earthquake Portal</title>
+</head>
+<body>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Explore Earthquakes</title>
+        <link rel="stylesheet" href="../static/styles/style.css">
+    </head>
+    <body>
+        <header>
+            <h1>Compare Earthquake Histories</h1>
+            <h3>Compare the earthquakes that have shaped different regions of the world.</h3>
+            <nav>
+                <ul>
+                    <li><a href="latest.html">Latest Earthquakes Exploration</a></li>
+                    <li><a href="historical.html">Historical Earthquake Activity</a></li>
+                    <li><a href="/">Home</a></li>
+                </ul>
+            </nav>
+        </header>
+
+    <section>
+<!-- Introduction and questions for K-12 Students -->
+    <h1>Explore the Magnitude on Human Lives</h1>
+    
+    <body>
+        <p> Imagine You're a Scientist Exploring Earthquakes! Use the special Earthquake Data Filters from Sets 1 and 2 to choose things like the country, Id, Minyear, Maxyear, and how strong the earthquakes are. This will help you find just the right earthquakes for your study!</p>
+
+     <div>
+            <h2>Observation:</h2>
+         <p>Take a close look at both pie charts on the webpage. What patterns or differences do you observe between the average number of deaths and the average magnitude? Are there any regions that stand out in terms of high or low values?</p>
+     </div>
+
+      <div>
+           <h2>Inference:</h2>
+            <p>Based on the information presented in the pie charts, can you make any inferences about the relationship between the severity of earthquakes (magnitude) and their impact on human lives (number of deaths)? How might these patterns relate to the geological characteristics of different regions?</p>
+     </div>
+
+
+
+
+        <div class="row">
+            <div class="col-md-2">
+              <div class="well">
+                <h2>Earthquake Data Filters Data Set 1</h2>
+                <!-- <h5>Country:</h5> -->
+                  <!-- Updated dropdown with id "countryDropdown" -->
+                  <!-- <select id="countryDropdown"></select> -->
+              </div>
+                <!-- Box to input a year -->
+                <form id="getDataForm">
+                    <div>
+                        <label for="Country">Country:</label>
+                        <select id="countryDropdown"></select>
+                        <label for="id">ID:</label>
+                        <input type="text" id="id" name="id" placeholder="Enter ID">
+                    </div>
+
+                    <div>  
+                        <label for="minYear">Min Year:</label>
+                        <input type="text" id="minYear" name="minYear" placeholder="Enter Min Year">
+                        <label for="maxYear">Max Year:</label>
+                        <input type="text" id="maxYear" name="maxYear" placeholder="Enter Max Year">
+                    </div>
+                    <div>
+                        <label for="fromMagnitude">From Magnitude:</label>
+                        <input type="text" id="fromMagnitude" name="fromMagnitude" placeholder="Enter From Magnitude">
+                        <label for="toMagnitude">To Magnitude:</label>
+                        <input type="text" id="toMagnitude" name="toMagnitude" placeholder="Enter To Magnitude">
+                    </div>
+                    
+                    <!-- <div class="col-md-5 d-flex justify-content-center align-items-center">
+                        <div id="Pie Chart Set 1"></div>
+                    </div> -->
+                     <!-- Second set of data -->
+                     <h2>Earthquake Data Filters Data Set 2</h2>
+                    <div class="input-group">
+                        <div>
+                            <label for="Country">Country:</label>
+                            <select id="countryDropdown2"></select>
+                            <label for="id">ID:</label>
+                            <input type="text" id="id2" name="id2" placeholder="Enter ID">
+                        </div>
+                
+                        <div>
+                            <label for="minYear">Min Year:</label>
+                            <input type="text" id="minYear2" name="minYear2" placeholder="Enter Min Year">
+                            <label for="maxYear">Max Year:</label>
+                            <input type="text" id="maxYear2" name="maxYear2" placeholder="Enter Max Year">
+                        </div>
+                
+                        <div>
+                            <label for="fromMagnitude">From Magnitude:</label>
+                            <input type="text" id="fromMagnitude2" name="fromMagnitude2" placeholder="Enter From Magnitude">
+                            <label for="toMagnitude">To Magnitude:</label>
+                            <input type="text" id="toMagnitude2" name="toMagnitude2" placeholder="Enter To Magnitude">
+                        </div>
+                    </div>
+                <!-- Getting the data from two set of data -->
+                    <button type="button" onclick="getData()">Get Data</button>
+                <!-- Graphing the data  -->
+                    <!-- <div class="col-md-5 d-flex justify-content-center align-items-center">
+                        <div id="Pie Chart Set 2"></div>
+                    </div> -->
+                 </form>
+                <!-- start table -->
+
+                <div class="comparisonSummary">
+                    <h4 id="summaryline1"></h4>
+                    <h4 id="summaryline2"></h4>
+                </div>
+
+                 <div class="chart-container">
+                    <div class="chart">
+                        <div class="col-md-5 d-flex justify-content-center align-items-center">
+                            <div id="Pie Chart Deaths"></div>
+                        </div>
+                    </div>
+                    <div class="chart">
+                        <div class="col-md-5 d-flex justify-content-center align-items-center">
+                            <div id="Pie Chart Magnitudes"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Finish table -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Capture page, defining d3 -->
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script type="text/javascript" src="../static/js/comparison.js"></script>
+
+    <footer>
+        <p>&copy; 2023 UofT Data Visualization Bootcamp - Explore Earthquakes Project. Group 2 Project 3 All rights reserved.</p>
+    </footer>
+    
+</body>
+</html>

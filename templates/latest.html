@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore Earthquakes</title>
+    <!-- Link to your CSS file -->
+    <link rel="stylesheet" href="../static/styles/style.css">
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+        crossorigin="" />
+</head>
+<body>
+    <header>
+        <h1>Latest Earthquakes Exploration</h1>
+        <h3>Explore recent seismic activity around the globe by researching and analyzing the data of the latest earthquakes.</h3>
+        <nav>
+            <ul>
+                <li><a href="historical.html">Historical Earthquakes Activity</a></li>
+                <li><a href="comparison.html">Compare Earthquake Histories</a></li>
+                <li><a href="/">Home</a></li>
+            </ul>
+        </nav>
+    </header>
+<section>
+
+    <h2>Earthquake Exploration:</h2>
+    <p>As a budding earthquake scientist, choose a time frame and minimum magniute to explore recent earthquakes. Consider the following:</p>
+    <li>What patterns did you notice in the earthquakes based on magnitude and time period?</li>
+    <p>Explore the news section to find additional information about recent earthquakes. <p>
+    <li>What new information did you discover, and how does it contribute to your understanding of earthquake science?</li>
+
+
+    <div class="row">
+        <div class="col-md-12 jumbotron text-center">
+            <h1>Latest Earthquakes</h1>
+            <h3>Use the Dropdowns to find out about recent earthquakes</h3>
+        </div>
+    </div>
+    <div>
+        <!-- Updated dropdown with id "magnitudeDropdown" -->
+        <label for="magnitudeDropdown">Select Magnitude:</label>
+        <select id="magnitudeDropdown">
+            <option value="1.0">Magnitude 1+</option>
+            <option value="2.5">Magnitude 2.5+</option>
+            <option value="4.5">Magnitude 4.5+</option>
+            <option value="all">All Magnitudes</option>
+        </select>
+        
+        <!-- Updated dropdown with id "timePeriodDropdown" -->
+        <label for="timePeriodDropdown">Select Time Period:</label>
+        <select id="timePeriodDropdown">
+            <option value="hour">Past Hour</option>
+            <option value="day">Past Day</option>
+            <option value="week">Past 7 Days</option>
+            <option value="month">Past 30 Days</option>
+        </select>
+        
+        <!-- Add a button with id "fetchDataButton" -->
+        <button id="fetchDataButton">Fetch Earthquakes</button>
+        <button onclick="capturePage()">Take a Screenshot</button>
+    </div>
+
+    <div id="content">
+        <!-- The fetched earthquake data will be displayed here -->
+    </div>
+
+    <!-- Map -->
+    <div class="container">
+        <div id="map"></div>
+
+        <div class="col-md-5">
+            <div id="hbar"></div>
+          </div>
+          <h3>Latest Earthquate News (Source: https://abcnews.go.com/alerts/earthquakes)</h3>
+          <div id="ticker-box">
+            <ul>
+            </ul>
+        </div>
+
+    </div>
+</section>
+    <!-- Capture page -->
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+    <!-- Include Plotly library -->
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+        crossorigin=""></script>
+
+    <!-- D3 JavaScript -->
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+
+    <!-- HTML2Canvas for screen capture -->
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+
+    <!-- Your JavaScript files -->
+    <script type="text/javascript" src="../static/js/config.js"></script>
+    <script type="text/javascript" src="../static/js/latest.js"></script>
+    <script type="text/javascript" src="../static/js/news-ticker.js"></script>
+
+
+    <footer>
+        <p>&copy; 2023 UofT Data Visualization Bootcamp - Explore Earthquakes Project. Group 2 Project 3 All rights reserved.</p>
+    </footer>
+</body>
+</html>

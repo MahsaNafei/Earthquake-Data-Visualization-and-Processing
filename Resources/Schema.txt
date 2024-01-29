@@ -1,0 +1,69 @@
+The following is the original schema of the JSON file containig the historical data being loaded to the database:
+
+{
+"i_d" - text,
+"flag_tsunami" - text,
+"year" - integer,
+"month" - text,
+"day" - text,
+"focal_depth" - integer,
+"eq_primary" - decimal,
+"eq_mag_mw" - decimal,
+"eq_mag_ms" - decimal,
+"eq_mag_mb" - decimal,
+"eq_mag_ml" - decimal,
+"eq_mag_mfa" - text,
+"eq_mag_unk" - decimal,
+"intensity" - integer,
+"country" - text,
+"state" - text,
+"location_name" - text,
+"region_code" - integer,
+"deaths" - integer,
+"deaths_description" - text,
+"missing" - decimal,
+"missing_description" - text,
+"injuries" - decimal,
+"injuries_description" - text,
+"damage_millions_dollars" - decimal,
+"damage_description" - text,
+"houses_destroyed" - integer,
+"houses_destroyed_description" - text,
+"houses_damaged" - text,
+"houses_damaged_description" - text,
+"total_deaths" - integer,
+"total_deaths_description" - text,
+"total_missing" - decimal,
+"total_missing_description" - text,
+"total_injuries" - decimal,
+"total_injuries_description" - text,
+"total_damage_millions_dollars" - text,
+"total_damage_description" - text,
+"total_houses_destroyed" - integer,
+"total_houses_destroyed_description" - text,
+"total_houses_damaged" - decimal,
+"total_houses_damaged_description" - text,
+"coordinates":{"lon", "lat"} - geo point
+}
+
+
+We loaded the above to a pyMongo table and kept the following columns:
+
+DB Name: earthquakes
+Collection Name: hist_quakes
+Fields:
+i_d - String
+year - Int32
+month - String
+day - String
+focal_depth - Int32
+eq_primary - Double
+country - String
+location_name - String
+deaths - Int32
+injuries - Double
+damage_description - String
+houses_destroyed - Long
+houses_damaged - String
+coordinates.lon - Double
+coordinate.lat - Double

@@ -1,0 +1,94 @@
+/* styles.css */
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f0f0f0;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+header {
+  background-color: #4CAF50;
+  color: white;
+  padding: 1em;
+  text-align: center;
+  border-radius: 10px; /* Adjust the value to control the roundness of the corners */
+  max-width: 900px; /* Set a maximum width for the header */
+  margin: 0 auto; /* Center the header horizontally */
+}
+
+section {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+img {
+  max-width: 30%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+#map {
+  height: 500px;
+  border-radius: 8px;
+  margin: 0 auto 15px;
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 1em 0;
+  position: static;
+  bottom: 0;
+  width: 100%
+}
+
+#content a {
+  display: block;
+  margin: 10px 0;
+  padding: 15px;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  background-color: #4caf50; /* Green background color */
+  border: 2px solid #45a049; /* Dark green border */
+  border-radius: 8px; /* Rounded corners */
+  font-size: 18px;
+  transition: background-color 0.3s ease; /* Smooth transition on hover */
+}
+
+nav ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  justify-content: center; /* Center the flex items horizontally */
+}
+
+nav li {
+  margin: 0 5px;
+}
+
+nav a {
+  display: block;
+  padding: 1em;
+  text-decoration: none;
+  color: white;
+  border: 2px solid #fff; /* Add border to the anchor element */
+  border-radius: 8px; /* Add border-radius for rounded corners */
+}
+
+nav a:hover {
+  background-color: rgb(29, 138, 63);
+}
+
+#content a:hover {
+  background-color: #a08845; /* Dark green on hover */
+}
